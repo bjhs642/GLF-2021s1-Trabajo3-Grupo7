@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+     crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <title>TRABAJO 2 AFD Y AFND</title>
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <div className="container">
+        <table width="100%" border="0" align="center">
+            <thead>
+                <tr>
+                    <td width="100%" height="56" align="center">
+                            <h1>TRABAJO 3: AFD a ER</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                            <div className="container" widht="100%">
+                                    <h2>AUTOMATAS</h2>
+                                    <hr>
+                            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top" class="p-3 mb-2 bg-secondary text-white border border-secondary" height="100">
+                        <div class="container-fluid">
+                            <h3>INSTRUCCIONES</h3>
+                            <h5>1.INGRESE AUTOMATA</h5>
+                            <p>Rellene cada cuadro ("Cantidad de estados", "Estado inicial"). Una vez rellenados todos los cuadros
+                                    dar click al boton de "Enviar" (los valores deben ser POSITIVOS Y ENTEROS, de lo contrario no se guardaran los datos).</p>
+                            <h5>2.INGRESE DATOS</h5>
+                            <p>Ingrese los datos solicitados ("Estado", "Alfabeto A", "Alfabeto B", "¿Es final?"). Una vez ingresados los datos,
+                                    seleccione el boton de "Agregar" (los valores deben ser POSITIVOS Y ENTEROS, de lo contrario no se guardaran los
+                                    datos) Repita este paso hasta ingresar todos los estados del automata.</p>
+                            <h6><strong>En caso de que "Alfabeto A" o "Alfabeto B" no exista, ingrese como dato "-1"</strong></h6>
+                            <h6><strong>En caso de que se trate de un AFND con más de 1 valor para "Alfabeto A" o "Alfabeto B" Ingrese los datos separados por un ",".<br> 
+                                Ejemplo: Estado: 1 | A: 2 | B: 2,3 <br> Luego "Agregar" <br></strong></h6><!--PUEDE QUE HAYA QUE BORRAR ESTO-->
+                            <h5>3.FINALIZAR AUTOMATA</h5>
+                            <p>Una vez finalizado el ingreso de datos del automata, seleccione el boton "Finalizar Automata"</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    <div>
+                    <hr>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    Cantidad de Estados: <input id="cantest" type="number" min="0" class="form-control"/>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                    Estado Inicial: <input id="inicio" type="number" min="0" class="form-control"/>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                    <center>
+                                    <button class="btn btn-primary" type="button" id="enviar">Enviar</button>
+                                    </center>
+                                </div>
+                                <br/>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-group">
+                                Estado: <input id="estado" type="number" min="0" class="form-control"/>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col">
+                                    Alfabeto A: <input id="varA" type="text" class="form-control"/>
+                                    </div>
+                                    <div class="form-group col">
+                                    Alfabeto B: <input id="varB" type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                ¿Es Final? <select id="final" class="form-control">
+                                    <option value="0">Si</option>
+                                    <option value="1">No</option>
+                                </select>
+                                </div>
+                                <br/>
+                                <div>
+                                    <center>
+                                        <button class="btn btn-primary" type="button" id="agregar"> Agregar </button>
+                                    </center>
+                                </div>
+                                <br/>
+                                <div>
+                                    <center>
+                                        <button class="btn btn-primary" type="button" id="finalizara"> Finalizar Automata</button>
+                                    </center>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    
+<div class="terminal">
+    <h3>Consola</h3>
+</div>
+
+</body>
+</html>
