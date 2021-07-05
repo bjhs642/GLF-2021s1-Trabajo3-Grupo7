@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xml:lang>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+	 crossorigin="anonymous">
+	<title>Trabajo 3</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="main.js" type="module"></script>
+  <script src="plog.js"></script>
+</head>
+
+<body>
+	<h1 style="text-align:center;">Trabajo #3: AFD a ER</h1>
+  <div class="box" justify-content="center">
+      <h4>¿Cómo sé que datos ingresar de mi AFD?</h4>
+      <img class="comoIngresar" src="EjemploDeUso.png" width="800" height="300" alt="Ejemplodeuso"/>
+  </div>
+	<div class="box01">
+		<div class="box02">
+      <h6>Intrucciones</h6>
+      <p>Paso 1: Rellene el formulario del lado izquierdo (Cantidad de estados, Estado inicial y Valores). Una vez rellenados, click en boton "Enviar" (Si no están con el formato pedido, no se guardarán los datos).-</p>
+      <p>Paso 2: Rellene la parte derecha (Estado, Dirreciones, ¿Aceptador?) tal como indica los ejemplos... Si no posee el formato pedido, los datos no se guardarán (En caso de que el nodo no tenga ningún camino -tal como el nodo "D", en el ejemplo-, ingresar la combinación: zZ).-</p>
+    </div>
+		<div class="box03">
+			<div class="datosUno">
+				<label for="Cestados">Cantidad de estados</label>
+        <br/>
+        <input id="Cestados" type="number" name="cantidadestados" placeholder="Solo numeros, ej: 2">
+        <br/>
+        <label for="Einicial">Estado inicial</label>
+        <br/>
+        <input type="text" id="Einicial" name="estadoinicial" placeholder="Solo letras, ej: A">
+        <br/>
+        <label for="valores">Valores</label>
+        <br/>
+        <input type="text" id="valores" name="valores" placeholder="Separar por comas, ej: a,b,c">
+        <br/>
+        <br/>
+        <button class="btn btn-primary" type="button" id="enviar">Enviar</button>
+        </div>
+            
+        <div class="datosDos">
+          <label for="estado">Estado</label>
+          <input id="estado" type="text" min="0" placeholder="Letra del nodo, ej: A">
+          <br/>
+          <label for="direcciones">Direcciones</label>
+          <input id="direcciones" type="text" min="-1" placeholder="ej: aB,bA"/>
+          <label for="final">¿Aceptador?</label>
+          <br/>
+          <select id="final">
+            <option value="0">Si</option>
+            <option value="1">No</option>
+          </select>
+          <br/>
+          <br/>
+          <button class="btn btn-primary" type="button" id="agregar">Agregar</button>
+        </div>
+      <div class="bton-finalizar">
+        <button class="btn btn-primary" type="button" id="finalizar">Finalizar llenado</button>
+      </div>
+    </div>
+	</div>
+
+  <div class="terminal">
+    <h3>Consola</h3>
+  </div>
+  
+  <div>
+    <button class="btn btn-primary" type="button" id="descargar"> DESCARGAR LOG</button>
+    <div id="download" class=""></div>
+  </div>
+</body>
+
+</html>
